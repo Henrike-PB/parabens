@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(22, 0, 22);
+}
+   
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+    z-index: 0; /* Para garantir que as bolhas fiquem atrás dos outros elementos */
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: #a200ff;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #a200ff44,
+    0 0 50px #a200ff,
+    0 0 100px #a200ff;
+    animation: animar calc(135s / var(--i)) linear infinite;
+}
+
+.bolhas span:nth-of-type(even) {
+    background: #7ff9fd;
+    box-shadow: 0 0 0 10px #7ff9fd44,
+    0 0 50px #7ff9fd,
+    0 0 100px #7ff9fd;
+}
+
+.caixa {
+    position: absolute;
+    top: 1%; /* Posiciona a caixa no meio verticalmente */
+    transform: translateY(-50%); /* Ajusta a posição vertical da caixa */
+    width: 400px;
+    height: 400px;
+    background: blue;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font: bold 2em 'Century Gothic';
+    z-index: 1; /* Garante que a caixa esteja acima das bolhas */
+}
+
+.para {
+    transform: translateY(2.5em);
+}
+
+.caixa::before,
+.caixa::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    z-index: -1;
+    background: linear-gradient(
+        45deg,
+        #ffff00,
+        #00ff00,
+        #0099ff,
+        #001aff,
+        #a200ff,
+        #ff0055,
+        #ff0000,
+        #ffff00,
+        #00ff00,
+        #0099ff,
+        #001aff,
+        #a200ff
+    );
+    background-size: 300%;
+    border-radius: 8px;
+    text-transform: uppercase;
+    animation: animarBorda 7s linear alternate-reverse infinite;
+}
+
+/* Para animar a borda do elemento que tem o "Parabéns" */
+@keyframes animarBorda {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}
+
+/* para animar as bolinhas do fundo */
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.caixa::after {
+    filter: blur(50px);
+}
+
+#botao-mudo {
+    background-color: #7006d381;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+
+main {
+    padding: auto;
+    line-height: 2.18rem;
+   font-weight: 500px;
+    position: fixed;
+    top: 69%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+    text-align: center;
+    font-size: 25px;
+}
+
+.p1 {
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.p2 {
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.p3 {
+    background: rgba( 255, 255, 255, 0.3 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}

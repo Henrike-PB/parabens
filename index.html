@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <audio id="audio" loop autoplay>
+            <source
+                src="media/HOJE É MEU ANIVERSÁRIO, ESTOU DE PARABÉNS - VIRAL DO TIKTOK - REI DO KUDURO (ANGOLANO ANIVERSÁRIO).mp3"
+                type="audio/mpeg"
+            />
+            Seu navegador não suporta áudio HTML5.
+        </audio>
+
+        <button id="botao-mudo">Mutar</button>
+
+        <div class="caixa">
+            <p class="para">
+                FELIZ ANIVERSÁRIO <br />
+                PARABÉNS JOÃO!!!!
+            </p>
+        </div>
+
+        <main>
+            <div class="texto">
+                <p class="p1">
+                    Feliz aniversário Sor!!! Continue sendo essa pessoa que
+                    inpira e ensina muita gente! Temos muito orgulho do senhor
+                </p>
+                <br />
+                <p class="p2">
+                    Tudo de bom, que todos os seus sonhos e objetivos se
+                    realizem! <br />
+                    <em>Tu faz a diferença</em>
+                </p>
+                <br />
+                <p class="p3">Abração!</p>
+            </div>
+        </main>
+
+        <div class="container">
+            <div class="bolhas">
+                <span style="--i: 19"></span>
+                <span style="--i: 13"></span>
+                <span style="--i: 31"></span>
+                <span style="--i: 47"></span>
+                <span style="--i: 01"></span>
+                <span style="--i: 02"></span>
+                <span style="--i: 24"></span>
+                <span style="--i: 05"></span>
+                <span style="--i: 09"></span>
+                <span style="--i: 22"></span>
+                <span style="--i: 28"></span>
+                <span style="--i: 7"></span>
+                <span style="--i: 11"></span>
+                <span style="--i: 14"></span>
+                <span style="--i: 35"></span>
+                <span style="--i: 16"></span>
+                <span style="--i: 25"></span>
+                <span style="--i: 18"></span>
+                <span style="--i: 11"></span>
+                <span style="--i: 14"></span>
+                <span style="--i: 35"></span>
+                <span style="--i: 16"></span>
+                <span style="--i: 25"></span>
+                <span style="--i: 18"></span>
+                <span style="--i: 01"></span>
+                <span style="--i: 02"></span>
+                <span style="--i: 24"></span>
+                <span style="--i: 05"></span>
+                <span style="--i: 09"></span>
+                <span style="--i: 22"></span>
+            </div>
+        </div>
+
+       
+    </body>
+    <script>
+        let audio = document.getElementById('audio');
+        let botaoMudo = document.getElementById('botao-mudo');
+
+        botaoMudo.addEventListener('click', function () {
+            if (audio.muted) {
+                audio.muted = false;
+                botaoMudo.textContent = 'Mutar';
+            } else {
+                audio.muted = true;
+                botaoMudo.textContent = 'Desmutar';
+            }
+        });
+    </script>
+</html>
